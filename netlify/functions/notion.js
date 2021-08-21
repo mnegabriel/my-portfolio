@@ -1,4 +1,4 @@
-import { Client } from '@notionhq/client'
+const { Client } = require('@notionhq/client')
 
 const { VITE_NOTION_API_KEY, VITE_NOTION_DB_ID } = process.env
 
