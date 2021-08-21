@@ -12,9 +12,6 @@
     $: boxWidth = box 
         ? `--border-color: ${color};`
         : ''
-
-
-
 </script>
 
 <div
