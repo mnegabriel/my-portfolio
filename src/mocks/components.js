@@ -1,7 +1,7 @@
 export default {
     sampleCard: {
         image: {
-            src: "/temp/sample_img.jpg",
+            src: "/images/sample_img.jpg",
             alt: "sample img",
         },
         title: 'Sample card item',
@@ -10,7 +10,7 @@ export default {
     tags: [
         {
             image: {
-                src: '/temp/vue_icon.png',
+                src: '/images/vue_icon.png',
                 alt: 'Vue.js'
             },
             name: 'Vue.js',
@@ -18,7 +18,7 @@ export default {
         },
         {
             image: {
-                src: '/temp/react_icon.png',
+                src: '/images/react_icon.png',
                 alt: 'React.js'
             },
             name: 'React.js',
@@ -26,7 +26,7 @@ export default {
         },
         {
             image: {
-                src: '/temp/angular_icon.png',
+                src: '/images/angular_icon.png',
                 alt: 'Angular.js'
             },
             name: 'Angular.js',
