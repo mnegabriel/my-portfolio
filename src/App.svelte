@@ -1,19 +1,23 @@
 <script>
     import mocks from "./mocks/components";
 
-    import CardComponent from "./lib/CardComponent.svelte";
-    import HeadingComponent from "./lib/HeadingComponent.svelte";
-    import TagComponent from "./lib/TagComponent.svelte";
+    import BaseCard from "./lib/BaseCard.svelte";
+    import BaseHeading from "./lib/BaseHeading.svelte";
+    import BaseTag from "./lib/BaseTag.svelte";
+import TheFooter from "./lib/TheFooter.svelte";
 
     const { sampleCard, tags } = mocks;
 </script>
 
 <h1>Components list</h1>
 
-<HeadingComponent title="Card" />
-<CardComponent {...sampleCard} />
+<BaseHeading title="Card" />
+<BaseCard {...sampleCard} />
 
-<HeadingComponent title="Tags" />
+<BaseHeading title="Tags" />
 {#each tags as tag}
-    <TagComponent {...tag} />
+    <BaseTag {...tag} />
 {/each}
+
+
+<TheFooter/>
