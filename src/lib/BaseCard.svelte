@@ -14,6 +14,7 @@
     <section class="content">
         <h4>{title}</h4>
         <p>{description}</p>
+        <slot name="tags"></slot>
     </section>
 </article>
 

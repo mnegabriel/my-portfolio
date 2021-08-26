@@ -30,7 +30,12 @@ exports.handler = async (event, context) => {
             filter,
         });
 
-        const formattedTags = tagsDb.results.map(formatPageProperties)
+        const formattedTags = tagsDb.results
+            .map(formatPageProperties, true)
+            .map(tag => ({
+                ...tag,
+                Name: tag.Name.replace(/icon/gi, '').trim()
+            }))
 
         const portifolioMergedWithTags = dataMerge(formattedPortfolio, formattedTags)
 
@@ -48,8 +53,8 @@ exports.handler = async (event, context) => {
     }
 }
 
-const formatPageProperties = page => {
-    const { properties, id } = page
+const formatPageProperties = (page, grabIcon) => {
+    const { properties, id, icon } = page
 
     let propsFormatted = {}
 
@@ -66,6 +71,8 @@ const formatPageProperties = page => {
         if (v.type === 'files') propsFormatted[k] = v.files
         propsFormatted.id = id
     })
+
+    if (grabIcon && icon && icon.file && icon.file.url) propsFormatted.link = icon.file.url
 
     return propsFormatted
 }

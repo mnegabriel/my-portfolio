@@ -9,9 +9,6 @@
         ? `--border-color: ${color};`
         : ''
 
-    $: boxWidth = box 
-        ? `--border-color: ${color};`
-        : ''
 </script>
 
 <div
@@ -55,10 +52,15 @@
     
     img {
         height: 100%;
+        padding: 3px;
     }
     
     .title {
         overflow: hidden;
+    }
+
+    .tag span {
+        white-space: nowrap;
     }
     
     .tag:hover {
@@ -66,4 +68,5 @@
         padding-left: 1.4rem;
         padding-right: 1.4rem;
     }
+
 </style>
