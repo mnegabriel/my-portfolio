@@ -1,7 +1,9 @@
 <script>
-    export let image = { src: "", alt: "", };
-    export let title = ''
-    export let description = ''
+    export let image = { src: "", alt: "" };
+    export let title = "";
+    export let description = "";
+
+    $: formattedDescription = description.replace(/\n/gi, "<br/>");
 </script>
 
 <article class:grid={image?.src}>
@@ -13,17 +15,14 @@
 
     <section class="content">
         <h4>{title}</h4>
-        <p>{description}</p>
-        <slot name="tags"></slot>
+        {#if description}
+            <p>{@html formattedDescription}</p>
+        {/if}
+        <slot name="tags" />
     </section>
 </article>
 
 <style>
-    /* temp */
-    article {
-        margin: 10px;
-    }
-    /* temp */
 
     article {
         overflow: hidden;
@@ -38,12 +37,16 @@
     }
 
     img {
-        min-height: 180px;
+        min-height: 18rem;
         object-fit: cover;
     }
 
     .content {
-        padding: 10px 18px 14px;
+        padding: 1.4rem 1.8rem;
+    }
+
+    .content :not(:first-child) {
+        margin-top: 1rem;
     }
 
     @media (min-width: 600px) {

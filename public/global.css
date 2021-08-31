@@ -1,8 +1,8 @@
 :root{
     --main-font: 'Lexend', sans-serif;
     --accent-font: 'DM Sans', sans-serif;
-    --black-900: #333333;
-    --container-width: 900px;
+    --black-900: hsl(0, 0%, 20%);
+    --container-width: 90rem;
 
     /* theme */
     --primary-color-h: 210;
@@ -13,22 +13,34 @@
     --darken: -10%;
 
     --primary-color: hsl(
-        var(--primary-color-h), var(--primary-color-s), var(--primary-color-l)
+        var(--primary-color-h), 
+        var(--primary-color-s),
+        var(--primary-color-l)
     );
     --primary-color-light: hsl(
-        var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + var(--lighten))
+        var(--primary-color-h), 
+        var(--primary-color-s), 
+        calc(var(--primary-color-l) + var(--lighten))
     );
     --primary-color-dark: hsl(
-        var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + var(--darken))
+        var(--primary-color-h), 
+        var(--primary-color-s), 
+        calc(var(--primary-color-l) + var(--darken))
     );
     --secondary-color: hsl(
-        calc(var(--primary-color-h) + var(--hue-extension)), var(--primary-color-s), var(--primary-color-l)
+        calc(var(--primary-color-h) + var(--hue-extension)), 
+        var(--primary-color-s), 
+        var(--primary-color-l)
     );
     --secondary-color-light: hsl(
-        calc(var(--primary-color-h) + var(--hue-extension)), var(--primary-color-s), calc(var(--primary-color-l) + var(--lighten))
+        calc(var(--primary-color-h) + var(--hue-extension)), 
+        var(--primary-color-s), 
+        calc(var(--primary-color-l) + var(--lighten))
     );
     --secondary-color-dark: hsl(
-        calc(var(--primary-color-h) + var(--hue-extension)), var(--primary-color-s), calc(var(--primary-color-l) + var(--darken))
+        calc(var(--primary-color-h) + var(--hue-extension)), 
+        var(--primary-color-s), 
+        calc(var(--primary-color-l) + var(--darken))
     );
 
     font-size: 62.5%;
@@ -87,3 +99,6 @@ span {
     font-size: inherit;    
 }
 
+ul {
+    list-style: none;
+}

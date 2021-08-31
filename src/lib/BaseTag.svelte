@@ -52,7 +52,7 @@
     
     img {
         height: 100%;
-        padding: 3px;
+        padding: .3rem;
     }
     
     .title {
