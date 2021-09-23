@@ -1,11 +1,13 @@
 <script>
 
 import BaseHeading from "./BaseHeading.svelte";
+import KeyVisual from "./KeyVisual.svelte";
 import ProjectDeck from "./ProjectDeck.svelte";
 
 </script>
 
 <section>
-    <BaseHeading title="Projects" />
+    <KeyVisual />
+    <BaseHeading title="Projetos" />
     <ProjectDeck />
 </section>
